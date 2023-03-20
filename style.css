@@ -1,0 +1,22 @@
+body {
+    background-color: grey;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    color: orangered;
+    font-size: 48px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid black;
+    margin: auto;
+    width: 720px;
+    height: 620px;
+}
+
