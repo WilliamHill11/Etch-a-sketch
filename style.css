@@ -11,12 +11,22 @@ h1 {
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
     border: 5px solid black;
     margin: auto;
     width: 720px;
     height: 620px;
-}
+    
 
+}
+/* 
+.wrap {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    grid-template-columns: 1fr;
+    grid-auto-columns: 50%;
+    grid-auto-flow: column;
+  } */
