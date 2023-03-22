@@ -31,7 +31,17 @@ h1 {
     border-radius: 55px;
     background-color: rgb(235, 60, 147, .7);
     opacity: .8;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 10px 50px purple;
 }
+
+.gridLayout:hover {
+    color: pink;
+    box-shadow: 0 10px 50px pink;
+    width: 111px;
+    height: 111px;
+  }
 
 .container {
     display: grid;

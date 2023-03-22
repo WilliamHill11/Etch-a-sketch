@@ -1,11 +1,6 @@
-// Ask user the size of how big they want the sketch 
-// from 1-100 max, when click it should reset and change board size
 const container = document.querySelector('.container');
-// let gridSize = prompt('Choose a grid size from 1-100');
-// for (let i = 0;  i < 16; i++) {
-//     if (gridSize > 100) {
-//         return 
-//     }
+const resetButton = document.querySelector('.gridLayout');
+
 function createGrid() {
     for (let i = 0;  i < 16; i++) {
         const row = document.createElement('div');
@@ -21,7 +16,32 @@ function createGrid() {
             })
       }
     }
-  }
+}
+
+// Ask user the size of how big they want the sketch 
+// from 1-100 max, when click it should reset and change board size
+function gridSize() {
+    let grid = prompt('Choose a grid size from 1-100');
+    container.innerHTML = "";
+    for (let i = 0;  i < grid; i++) {
+        if (grid > 100) {
+            return 
+        }
+        const row = document.createElement('div');
+        row.classList.add('row');
+        container.append(row);
+        for (let j = 0; j < grid; j++) {
+            const cell = document.createElement('div');
+            cell.classList.add('cell');
+            row.append(cell);
+            cell.addEventListener('mouseover', () => {
+                cell.style.backgroundColor = getRandomColor();
+            })
+        }
+    }
+}
+
+resetButton.addEventListener('click', gridSize);
 
   
 function getRandomColor() {
@@ -35,4 +55,3 @@ createGrid()
 
 
 // reset or clear button 
-
