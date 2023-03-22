@@ -41,9 +41,7 @@ function gridSize() {
     }
 }
 
-resetButton.addEventListener('click', gridSize);
 
-  
 function getRandomColor() {
     var r = Math.floor(Math.random() * 256);
     var g = Math.floor(Math.random() * 256);
@@ -51,7 +49,9 @@ function getRandomColor() {
     return "rgb(" + r + ", " + g + ", " + b + ")";
 }
 
+
 createGrid()
 
-
 // reset or clear button 
+resetButton.addEventListener('click', gridSize);
+
