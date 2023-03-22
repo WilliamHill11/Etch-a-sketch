@@ -1,21 +1,45 @@
 body {
-    background-color: grey;
+    background-image: linear-gradient(purple, hotpink);
+    height: 100vh;
 }
 
 h1 {
     display: flex;
     justify-content: center;
     font-weight: bold;
-    color: orangered;
+    color: palevioletred;
     font-size: 48px;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.reset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    height: 100%;
+    font-size: 28px;
+    font-family: 'Permanent Marker', cursive;
+    color: rgb(133, 21, 133);
+}
+
+.gridLayout {
+    margin: auto;
+    margin-top: 40px;
+    width: 110px;
+    height: 110px;
+    border-radius: 55px;
+    background-color: rgb(235, 60, 147, .7);
+    opacity: .8;
 }
 
 .container {
     display: grid;
-    border: 5px solid black;
+    border: 3px solid black;
     margin: auto;
     width: 720px;
     height: 620px;
+    background-color: white;
 }
 
 .row {
@@ -23,18 +47,7 @@ h1 {
   }
   
   .cell {
-    background-color: lightgray;
-    border: 1px solid rgb(11, 6, 6);
+    border: 1px solid black;
     height: 100%;
     width: 100%;
   }
-/* 
-.wrap {
-    display: grid;
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
-    grid-template-columns: 1fr;
-    grid-auto-columns: 50%;
-    grid-auto-flow: column;
-  } */
