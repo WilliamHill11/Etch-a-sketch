@@ -12,14 +12,22 @@ h1 {
 
 .container {
     display: grid;
-    grid-template-columns: auto auto auto auto;
     border: 5px solid black;
     margin: auto;
     width: 720px;
     height: 620px;
-    
-
 }
+
+.row {
+    display: flex;
+  }
+  
+  .cell {
+    background-color: lightgray;
+    border: 1px solid rgb(11, 6, 6);
+    height: 100%;
+    width: 100%;
+  }
 /* 
 .wrap {
     display: grid;

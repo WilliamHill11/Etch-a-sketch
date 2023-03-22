@@ -1,21 +1,25 @@
-const container = document.querySelector('.container');
-
-
-
-
 // Ask user the size of how big they want the sketch 
 // from 1-100 max, when click it should reset and change board size
-// let sketch = prompt('1-100');
-for (i = 0; i < 16; i++) {
-    const grids = document.createElement('div');
-    container.append(grids);
-    grids.style.width = '16';
-    grids.style.height = '16';
-    grids.style.backgroundColor = 'blue';
-    grids.style.border = 'solid black';
-    // container.style.gridTemplateColumns = 'auto * 16';
-}
+function createGrid() {
+    const container = document.querySelector('.container');
+    let gridSize = prompt('Choose a grid size from 1-100');
+    for (let i = 0;  i < gridSize; i++) {
+        if (gridSize > 100) {
+            return 
+        }
+        const row = document.createElement('div');
+        row.classList.add('row');
+        container.append(row);
+        for (let j = 0; j < gridSize; j++) {
+            const cell = document.createElement('div');
+            cell.classList.add('cell');
+            row.append(cell);
+      }
+    }
+  }
+
+  createGrid()
 
 // reset or clear button 
 
-// rainbow color palette 
+//Hover effect to make pixelated trail in grid
